@@ -1,8 +1,8 @@
 /* General body styling */
 body {
-  background-color: #f4f4f4;
-  color: #333;
-  font-family: Arial, sans-serif;
+  background-color: #f4f4f4; /* Light grey background */
+  color: #444; /* Dark text color */
+  font-family: "Poppins", sans-serif; /* Clean sans-serif font */
   margin: 0;
   padding: 20px;
 }
@@ -15,70 +15,118 @@ table {
   font-size: 1em;
   min-width: 600px;
   text-align: left;
+  border-radius: 12px; /* Rounded corners for the table */
+  overflow: hidden; /* To make rounded corners work */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Strong shadow for the table */
+  background: #fff; /* White background for the table */
 }
 
+/* Header styling */
 thead tr {
-  background-color: #009879; /* Header background color */
-  color: #ffffff; /* Header text color */
+  background-color: #4a4e69; /* Darker header background color */
+  color: #f9f9f9; /* Light header text color */
   text-align: left;
-  font-weight: bold; /* Bold header text */
+  font-weight: 600; /* Semi-bold header text */
+  letter-spacing: 1px; /* Spacing between letters */
 }
 
+/* Body styling */
 tbody tr {
   border-bottom: 1px solid #dddddd; /* Row separator */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3; /* Even row background color */
+  background-color: #f8f8f8; /* Light grey for even rows */
+}
+
+tbody tr:hover {
+  background-color: #d8dee9; /* Hover effect */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Shadow effect on hover */
+  cursor: pointer; /* Pointer cursor on hover */
 }
 
 tbody tr:last-of-type {
-  border-bottom: 2px solid #009879; /* Bottom border for the last row */
+  border-bottom: 2px solid #4a4e69; /* Bottom border for the last row */
 }
 
 td,
 th {
-  padding: 12px 15px; /* Cell padding */
+  padding: 15px 20px; /* Cell padding */
 }
 
-tbody tr:hover {
-  background-color: #f1f1f1; /* Row hover effect */
-  cursor: pointer; /* Pointer cursor on hover */
-}
-
-/* Headings styling */
+/* Heading styles */
 h1 {
-  color: #009879; /* Heading color */
+  color: #4a4e69; /* Heading color */
   text-align: center; /* Center heading */
   margin-bottom: 20px; /* Margin below the heading */
+  font-size: 2.5em; /* Larger font size for the main heading */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 2px; /* Spacing between letters */
+  border-bottom: 3px solid #4a4e69; /* Underline for the heading */
+  padding-bottom: 10px; /* Padding below the heading */
 }
 
+/* Subheading styles */
+h2 {
+  color: #444;
+  text-align: center;
+  font-size: 2em; /* Subheading size */
+  margin: 20px 0; /* Margin above and below */
+}
+
+/* Button and link styling */
+button,
+a {
+  background-color: #4a4e69; /* Button background color */
+  color: #f9f9f9; /* Button text color */
+  padding: 10px 15px; /* Button padding */
+  text-decoration: none; /* Remove underline for links */
+  border: none; /* Remove border for buttons */
+  border-radius: 30px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+  font-weight: 500; /* Medium font weight */
+  font-size: 1em; /* Font size for buttons */
+}
+
+button:hover,
+a:hover {
+  background-color: #22223b; /* Darker shade on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Additional styling for lists */
 ul {
   list-style-type: none; /* Remove bullet points */
   padding: 0; /* Remove padding */
 }
 
 ul li {
-  background-color: #009879; /* List item background color */
-  color: #ffffff; /* List item text color */
-  padding: 10px; /* Padding for list items */
+  background-color: #4a4e69; /* List item background color */
+  color: #f9f9f9; /* List item text color */
+  padding: 12px; /* Padding for list items */
   margin: 5px 0; /* Margin between list items */
   border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
 }
 
-/* Additional styles for buttons or links, if applicable */
-button,
-a {
-  background-color: #009879; /* Button background color */
-  color: #ffffff; /* Button text color */
-  padding: 10px 15px; /* Button padding */
-  text-decoration: none; /* Remove underline for links */
-  border: none; /* Remove border for buttons */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor for buttons */
+ul li:hover {
+  background-color: #22223b; /* Darker shade on hover */
 }
 
-button:hover,
-a:hover {
-  background-color: #007c65; /* Darker shade on hover */
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.9em; /* Smaller font size for mobile */
+  }
+
+  h1 {
+    font-size: 2em; /* Smaller main heading for mobile */
+  }
+
+  h2 {
+    font-size: 1.5em; /* Smaller subheading for mobile */
+  }
 }
