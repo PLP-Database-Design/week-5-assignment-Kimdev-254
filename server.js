@@ -34,7 +34,7 @@ app.get("/patients", (req, res) => {
       console.log(err)
       res.status(500).send("Error retrieving data")
     } else {
-      res.render("data", { results: results })
+      res.render("patients", { results: results })
     }
   })
 })
@@ -69,20 +69,22 @@ app.get("/patients/firstname", (req, res) => {
 
 // Question 4: Retrieve all providers by their specialty
 app.get("/providers/specialty", (req, res) => {
-  db.query("SELECT DISTINCT provider_specialty FROM providers", (err, results) => {
-    if (err) {
-      console.log(err);
-      res.status(500).send("Error retrieving specialty");
-    } else {
-      if (results.length > 0) {
-        res.render("specialty", { specialty: results });
+  db.query(
+    "SELECT DISTINCT provider_specialty FROM providers",
+    (err, results) => {
+      if (err) {
+        console.log(err)
+        res.status(500).send("Error retrieving specialty")
       } else {
-        res.status(404).send("Specialty not found");
+        if (results.length > 0) {
+          res.render("specialty", { specialty: results })
+        } else {
+          res.status(404).send("Specialty not found")
+        }
       }
     }
-  });
-});
-
+  )
+})
 
 // Server listening
 const port = process.env.PORT

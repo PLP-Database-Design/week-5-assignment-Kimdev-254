@@ -1,0 +1,84 @@
+/* General body styling */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1em;
+  min-width: 600px;
+  text-align: left;
+}
+
+thead tr {
+  background-color: #009879; /* Header background color */
+  color: #ffffff; /* Header text color */
+  text-align: left;
+  font-weight: bold; /* Bold header text */
+}
+
+tbody tr {
+  border-bottom: 1px solid #dddddd; /* Row separator */
+}
+
+tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3; /* Even row background color */
+}
+
+tbody tr:last-of-type {
+  border-bottom: 2px solid #009879; /* Bottom border for the last row */
+}
+
+td,
+th {
+  padding: 12px 15px; /* Cell padding */
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1; /* Row hover effect */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Headings styling */
+h1 {
+  color: #009879; /* Heading color */
+  text-align: center; /* Center heading */
+  margin-bottom: 20px; /* Margin below the heading */
+}
+
+ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+ul li {
+  background-color: #009879; /* List item background color */
+  color: #ffffff; /* List item text color */
+  padding: 10px; /* Padding for list items */
+  margin: 5px 0; /* Margin between list items */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Additional styles for buttons or links, if applicable */
+button,
+a {
+  background-color: #009879; /* Button background color */
+  color: #ffffff; /* Button text color */
+  padding: 10px 15px; /* Button padding */
+  text-decoration: none; /* Remove underline for links */
+  border: none; /* Remove border for buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor for buttons */
+}
+
+button:hover,
+a:hover {
+  background-color: #007c65; /* Darker shade on hover */
+}
